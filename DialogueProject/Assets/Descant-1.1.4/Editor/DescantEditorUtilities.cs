@@ -101,13 +101,13 @@ namespace Descant.Editor
             string[] paths =
             {
                 "Packages/com.owmacohe.descant/Resources/",
-                "Packages/Descant-1.1.3/Resources/",
+                "Packages/Descant-1.1.4/Resources/",
                 
                 "Assets/com.owmacohe.descant/Resources/",
-                "Assets/Descant-1.1.3/Resources/",
+                "Assets/Descant-1.1.4/Resources/",
                 
                 "Assets/com.owmacohe.descant/Resources/",
-                "Assets/Packages/Descant-1.1.3/Resources/"
+                "Assets/Packages/Descant-1.1.4/Resources/",
             };
 
             StyleSheet styleSheet = null;

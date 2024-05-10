@@ -23,7 +23,7 @@ MonoBehaviour:
   - Name: ChoiceNode
     Type: Choice
     ID: 1
-    Position: {x: 795, y: 45}
+    Position: {x: 745, y: 81}
     NodeComponents:
     - rid: 7632772672291864709
     Choices:
@@ -41,7 +41,7 @@ MonoBehaviour:
   - Name: ResponseNode
     Type: Response
     ID: 0
-    Position: {x: 156, y: 62}
+    Position: {x: 106, y: 98}
     NodeComponents: []
     Response: Hi there!
   - Name: ResponseNode
@@ -65,13 +65,13 @@ MonoBehaviour:
   - Name: ResponseNode
     Type: Response
     ID: 6
-    Position: {x: 156, y: 231}
+    Position: {x: 106, y: 267}
     NodeComponents: []
     Response: 
   - Name: ResponseNode
     Type: Response
     ID: 7
-    Position: {x: 1066, y: 442}
+    Position: {x: 1074, y: 442}
     NodeComponents: []
     Response: 
   - Name: ResponseNode
@@ -84,7 +84,7 @@ MonoBehaviour:
     Name: StartNode
     Type: Start
     ID: 0
-    Position: {x: -316, y: 50}
+    Position: {x: -366, y: 86}
     NodeComponents:
     - rid: 7632772672291864710
   EndNodes:
@@ -120,7 +120,7 @@ MonoBehaviour:
     NodeIDs: 010000000200000002000000
   - Name: QuickEnding
     ID: 2
-    Position: {x: 2879.9998, y: -210.00003}
+    Position: {x: 2763.8499, y: -252.55}
     Nodes: []
     NodeIDs: 
   - Name: LongEnding
@@ -130,7 +130,7 @@ MonoBehaviour:
     NodeIDs: 
   - Name: NodeGroup
     ID: 6
-    Position: {x: -341, y: -14}
+    Position: {x: -391.00006, y: 22}
     Nodes:
     - Choice
     - Response
