@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce95f313843e48d1a4b8cf6050141954, type: 3}
+  m_Name: JoeGraph
+  m_EditorClassIdentifier: 
+  Autosave: 0
+  Typewriter: 1
+  TypewriterSpeed: 1.5
+  ChoiceNodeID: 6
+  ResponseNodeID: 9
+  EndNodeID: 5
+  GroupID: 7
+  ChoiceNodes:
+  - Name: ChoiceNode
+    Type: Choice
+    ID: 1
+    Position: {x: 795, y: 45}
+    NodeComponents:
+    - rid: 7632772672291864709
+    Choices:
+    - How are ya?
+    - '[Flirt] What do ya say we get out of here?'
+    - See you later.
+  - Name: ChoiceNode
+    Type: Choice
+    ID: 3
+    Position: {x: 2313, y: 287}
+    NodeComponents: []
+    Choices:
+    - Cool!
+  ResponseNodes:
+  - Name: ResponseNode
+    Type: Response
+    ID: 0
+    Position: {x: 156, y: 62}
+    NodeComponents: []
+    Response: Hi there!
+  - Name: ResponseNode
+    Type: Response
+    ID: 1
+    Position: {x: 1632, y: -291}
+    NodeComponents: []
+    Response: Not bad, thanks for asking.
+  - Name: ResponseNode
+    Type: Response
+    ID: 2
+    Position: {x: 1632, y: 0}
+    NodeComponents: []
+    Response: '[FAILED] Pass.'
+  - Name: ResponseNode
+    Type: Response
+    ID: 4
+    Position: {x: 2905, y: 287}
+    NodeComponents: []
+    Response: Bye!
+  - Name: ResponseNode
+    Type: Response
+    ID: 6
+    Position: {x: 156, y: 231}
+    NodeComponents: []
+    Response: 
+  - Name: ResponseNode
+    Type: Response
+    ID: 7
+    Position: {x: 1066, y: 442}
+    NodeComponents: []
+    Response: 
+  - Name: ResponseNode
+    Type: Response
+    ID: 8
+    Position: {x: 1644, y: -670}
+    NodeComponents: []
+    Response: 
+  StartNode:
+    Name: StartNode
+    Type: Start
+    ID: 0
+    Position: {x: -316, y: 50}
+    NodeComponents:
+    - rid: 7632772672291864710
+  EndNodes:
+  - Name: EndNode
+    Type: End
+    ID: 0
+    Position: {x: 2905, y: -151}
+    NodeComponents:
+    - rid: 7632772672291864711
+    - rid: 4239218954052567070
+  - Name: EndNode
+    Type: End
+    ID: 1
+    Position: {x: 3465, y: 287}
+    NodeComponents:
+    - rid: 7632772672291864712
+    - rid: 4239218954052567069
+  - Name: EndNode
+    Type: End
+    ID: 2
+    Position: {x: 1632, y: 180}
+    NodeComponents:
+    - rid: 7632772813772292225
+    - rid: 4239218954052567040
+  Groups:
+  - Name: Answers
+    ID: 0
+    Position: {x: 1607, y: -350}
+    Nodes:
+    - Response
+    - Response
+    - End
+    NodeIDs: 010000000200000002000000
+  - Name: QuickEnding
+    ID: 2
+    Position: {x: 2879.9998, y: -210.00003}
+    Nodes: []
+    NodeIDs: 
+  - Name: LongEnding
+    ID: 3
+    Position: {x: 2880, y: 228.00002}
+    Nodes: []
+    NodeIDs: 
+  - Name: NodeGroup
+    ID: 6
+    Position: {x: -341, y: -14}
+    Nodes:
+    - Choice
+    - Response
+    - Start
+    - Response
+    NodeIDs: 01000000000000000000000006000000
+  Connections:
+  - From: Response
+    FromID: 6
+    To: Choice
+    ToID: 1
+    ChoiceIndex: 0
+  - From: Response
+    FromID: 8
+    To: Choice
+    ToID: 1
+    ChoiceIndex: 0
+  - From: Choice
+    FromID: 1
+    To: Response
+    ToID: 1
+    ChoiceIndex: 1
+  - From: Choice
+    FromID: 1
+    To: Response
+    ToID: 2
+    ChoiceIndex: 2
+  - From: Choice
+    FromID: 1
+    To: End
+    ToID: 2
+    ChoiceIndex: 3
+  - From: Choice
+    FromID: 3
+    To: null
+    ToID: -1
+    ChoiceIndex: 1
+  - From: Start
+    FromID: 0
+    To: Response
+    ToID: 0
+    ChoiceIndex: 0
+  - From: Response
+    FromID: 0
+    To: Response
+    ToID: 6
+    ChoiceIndex: 0
+  - From: Response
+    FromID: 1
+    To: Response
+    ToID: 8
+    ChoiceIndex: 0
+  - From: Response
+    FromID: 2
+    To: Response
+    ToID: 8
+    ChoiceIndex: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 4239218954052567040
+      type: {class: Event, ns: Descant.Components, asm: omch.descant.components}
+      data:
+        Collapsed: 0
+        ObjectTag: Player
+        ScriptName: Player
+        MethodName: ExitDialogue
+        Parameter: 
+    - rid: 4239218954052567069
+      type: {class: Event, ns: Descant.Components, asm: omch.descant.components}
+      data:
+        Collapsed: 0
+        ObjectTag: Player
+        ScriptName: Player
+        MethodName: ExitDialogue
+        Parameter: 
+    - rid: 4239218954052567070
+      type: {class: Event, ns: Descant.Components, asm: omch.descant.components}
+      data:
+        Collapsed: 0
+        ObjectTag: Player
+        ScriptName: Player
+        MethodName: ExitDialogue
+        Parameter: 
+    - rid: 7632772672291864709
+      type: {class: Log, ns: Descant.Components, asm: omch.descant.components}
+      data:
+        Collapsed: 0
+        Message: First choice!
+    - rid: 7632772672291864710
+      type: {class: Log, ns: Descant.Components, asm: omch.descant.components}
+      data:
+        Collapsed: 0
+        Message: Begin!
+    - rid: 7632772672291864711
+      type: {class: Log, ns: Descant.Components, asm: omch.descant.components}
+      data:
+        Collapsed: 0
+        Message: Second ending
+    - rid: 7632772672291864712
+      type: {class: Log, ns: Descant.Components, asm: omch.descant.components}
+      data:
+        Collapsed: 0
+        Message: Third ending
+    - rid: 7632772813772292225
+      type: {class: Log, ns: Descant.Components, asm: omch.descant.components}
+      data:
+        Collapsed: 0
+        Message: First ending
